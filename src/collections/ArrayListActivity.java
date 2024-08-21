@@ -28,25 +28,25 @@ public class ArrayListActivity {
         }
     }
 
-    public static ArrayList<Integer> removeEven(ArrayList<Integer> arrayL){
-        for(int i = 0; i < arrayL.size(); i++){
-            if(arrayL.get(i) % 2 == 0){
-                arrayL.remove(arrayL.get(i));
-                i--;
-            }
-        }
-        return arrayL;
-    }
+    // public static ArrayList<Integer> removeEven(ArrayList<Integer> arrayL){
+    //     for(int i = 0; i < arrayL.size(); i++){
+    //         if(arrayL.get(i) % 2 == 0){
+    //             arrayL.remove(arrayL.get(i));
+    //             i--;
+    //         }
+    //     }
+    //     return arrayL;
+    // }
 
-    public static ArrayList<Integer> removeEven(ArrayList<Integer> arrayL){
-        Iterator<Integer> iterator  = arrayL.iterator();
+    // public static ArrayList<Integer> removeEven(ArrayList<Integer> arrayL){
+    //     Iterator<Integer> iterator  = arrayL.iterator();
 
-        while(iterator.hasNext()) {
-            int num = iterator.next();
-            if(num % 2 == 0){
-                iterator.remove();
-            }
-        }
-        return arrayL;
-    }
+    //     while(iterator.hasNext()) {
+    //         int num = iterator.next();
+    //         if(num % 2 == 0){
+    //             iterator.remove();
+    //         }
+    //     }
+    //     return arrayL;
+    // }
 }
