@@ -15,7 +15,7 @@ Time Complexity
         The algorithm’s running time scales linearly with the input size.
 
 ## Sort Algorithms
-- Bubble Sort: Is a simple sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items, and swaps them if they are in the wrong order. This process is repeated until the list is sorted.
+- Bubble Sort: Is a simple sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items, and swaps them if they are in the wrong order. This process is repeated until the list is sorted. While is swaping the data inside the array, the first part to be sorted is the end, because the greater element, through comparissons, travel to the array's end.
 ### Pros
 1 - Simplicity;
 2 - No additional memory : in-place sorting algorithm;
