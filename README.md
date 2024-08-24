@@ -18,12 +18,13 @@ Time Complexity
 - Bubble Sort: Is a simple sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items, and swaps them if they are in the wrong order. This process is repeated until the list is sorted. While is swaping the data inside the array, the first part to be sorted is the end, because the greater element, through comparissons, travel to the array's end.
 ### Pros
 1 - Simplicity;
-2 - No additional memory : in-place sorting algorithm;
+2 - No additional memory : in-place sorting algorithm, logically-partitioning array;
 
 ### Cons
 1 - Not feasible for large datasets (Quadratic time complexity);
 2 - Many write operations, swaping all the time;
 3 - Inefficient use of CPU;
+4 - O(n²) time complexity - quadratic;
 
 ## Authors
 
