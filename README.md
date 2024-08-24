@@ -14,6 +14,17 @@ Time Complexity
 - Linear Time: 
         The algorithm’s running time scales linearly with the input size.
 
+## Sort Algorithms
+- Bubble Sort: Is a simple sorting algorithm that repeatedly steps through the list to be sorted, compares each pair of adjacent items, and swaps them if they are in the wrong order. This process is repeated until the list is sorted.
+### Pros
+1 - Simplicity;
+2 - No additional memory : in-place sorting algorithm;
+
+### Cons
+1 - Not feasible for large datasets (Quadratic time complexity);
+2 - Many write operations, swaping all the time;
+3 - Inefficient use of CPU;
+
 ## Authors
 
 - [@NascimentoDavi](https://www.github.com/NascimentoDavi)
