@@ -11,7 +11,7 @@ This is actually only a repository where I'm storing all the knowledge I've been
 
 - [@NascimentoDavi](https://www.github.com/NascimentoDavi)
 
-https://img.shields.io/github/commit-activity/t/NascimentoDavi/data_structure?color=violet
+![GitHub commit activity](https://img.shields.io/github/commit-activity/t/NascimentoDavi/data_structure?color=violet)
 
 ## 🛠 Skills
 Java, HTML, CSS, PHP
