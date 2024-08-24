@@ -8,10 +8,10 @@ This is actually only a repository where I'm storing all the knowledge I've been
 ## Collections
 
 ## Big-O Notation
-Time Complexity:
-- Constant Time
+Time Complexity
+- Constant Time: 
     The algorithm’s running time is independent of the input size and is the most efficient;
-- Linear Time
+- Linear Time: 
         The algorithm’s running time scales linearly with the input size.
 
 ## Authors
