@@ -1,4 +1,4 @@
-package arrays;
+package bubble_sort;
 
 public class Index {
     public static void main(String[] args){
@@ -11,7 +11,7 @@ public class Index {
             intArray[i] = (int)(Math.random() * 50 + 1);
         }
 
-        // Printing it
+        // Printing it's items
         for(int i = 0; i < intArray.length; i++){
             System.out.println(intArray[i]);
         }
