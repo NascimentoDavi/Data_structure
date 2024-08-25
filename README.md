@@ -26,6 +26,7 @@ A sorting algorithm is unstable if it does not necessarily preserve the relative
 ### Pros
 1 - Simplicity;
 2 - No additional memory : in-place sorting algorithm, logically-partitioning array;
+3 - Stable Sort (the relative order of equal items is kept);
 
 ### Cons
 1 - Not feasible for large datasets (Quadratic time complexity);
