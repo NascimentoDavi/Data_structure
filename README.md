@@ -14,11 +14,10 @@ This is actually only a repository where I'm storing all the knowledge I've been
     - Cannot be infinite
     - Dinamically sized
     - Do not have any order
-    
+
 #### HashSet
     
-
-
+#### TreeSet
 
 ## Big-O Notation
 Time Complexity
