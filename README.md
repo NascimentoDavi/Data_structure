@@ -34,6 +34,8 @@ A sorting algorithm is unstable if it does not necessarily preserve the relative
 3 - Inefficient use of CPU;
 4 - O(n²) quadratic time complexity;
 
+Selection Sort : Divides the array into two parts: sorted and unsorted.
+
 ## Authors
 
 - [@NascimentoDavi](https://www.github.com/NascimentoDavi)
