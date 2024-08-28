@@ -14,10 +14,15 @@ This is actually only a repository where I'm storing all the knowledge I've been
     - Cannot be infinite
     - Dinamically sized
     - Do not have any order
+    - Insure Uniqueness
 
 #### HashSet
-    
+    - Faster with modification operations
+    - Do not stablish an order among the objects inserted
+
 #### TreeSet
+    - Preserve the objects natural order
+    - Loses performance in Insertion and Remotion operations
 
 ## Big-O Notation
 Time Complexity
