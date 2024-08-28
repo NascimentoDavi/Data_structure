@@ -18,7 +18,32 @@ This is actually only a repository where I'm storing all the knowledge I've been
 
 #### HashSet
     - Faster with modification operations
-    - Do not stablish an order among the objects inserted
+    - Do not stablish any order among the objects inserted
+
+```java
+// Printing HashSet elements using forEach
+for(int hash : hashSet){
+    System.out.println(hash);
+}
+
+// Printinh HashSet elements using Iterator
+Iterator<Integer> iterator = hashSet.iterator();
+while(iterator.hasNext()){
+    System.out.println(iterator.next());
+}
+
+// Printing using toString()
+System.out.println(hashSet);
+
+// Printing turning the set into an array
+Object[] hashSetToArray = hashSet.toArray();
+for(int i = 0; i < hashSetToArray.length; i++){
+    System.out.println(hashSetToArray[i]);
+}
+
+
+
+```
 
 #### TreeSet
     - Preserve the objects natural order

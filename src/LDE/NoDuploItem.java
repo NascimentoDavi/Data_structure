@@ -1,6 +1,6 @@
 package LDE;
 
-import entity.Item;
+import Entity.Item;
 
 public class NoDuploItem {
 	private NoDuploItem prox, ant;

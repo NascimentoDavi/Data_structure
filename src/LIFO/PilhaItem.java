@@ -1,7 +1,7 @@
 package LIFO;
 
-import entity.NoItem;
-import entity.Item;
+import Entity.Item;
+import Entity.NoItem;
 
 public class PilhaItem {
     private NoItem top;
