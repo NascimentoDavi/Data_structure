@@ -42,7 +42,7 @@ for(int i = 0; i < hashSetToArray.length; i++){
 }
 
 
-// Custom toString method int HashSet Class
+// Custom toString method in HashSet Class
 public class CustomHashSet<E> extends HashSet<E> {
 
     @Override
