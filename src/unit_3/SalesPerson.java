@@ -100,6 +100,8 @@ public class SalesPerson {
         }
     }
 
+    // mostre na tela os vendedores com maior tempo de serviço
+
     @Override
     public String toString () {
         return "Name : " + this.name + " | Time of Service : " + this.serviceTime + " | Category : " + this.category + " | Total of Sales : " + this.totalSales;

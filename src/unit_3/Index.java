@@ -1,17 +1,19 @@
 package unit_3;
 
+import java.util.ArrayList;
+
 public class Index {
 
     public static void main(String[] args) {
 
-        SalesPerson vendedor1 = new SalesPerson("David", 4, 560);
-        SalesPerson vendedor2 = new SalesPerson("Felipe", 2, 568);
+        ArrayList<SalesPerson> list = new ArrayList<SalesPerson>();
 
-        System.out.println(SalesPerson.getSalary());
+        for (int i = 0; i < 5; i++){
+            SalesPerson sp = new SalesPerson(Integer.toString(i), i, i);
+            list.add(sp);
+        }
 
-        vendedor1.setSalary(1400);
-
-        System.out.println(SalesPerson.getSalary());
+         
     }
 
 }
