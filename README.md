@@ -99,7 +99,34 @@ A sorting algorithm is unstable if it does not necessarily preserve the relative
 3 - Inefficient use of CPU;
 4 - O(n²) quadratic time complexity;
 
-Selection Sort : Divides the array into two parts: sorted and unsorted.
+- Selection Sort : Divides the array into two parts: sorted and unsorted.
+
+## Polimorfismo em tempo de execução - Overriding (Java)
+### Por que em tempo de execução? 
+- Porque a JVM decide qual dos métodos chamar no tipo real do objeto, e nao no tipo da sua referência.
+- Observação : Nesse caso o conceito de Herança também é utilizado, pois herdamos os atributos e métodos da SuperClasse.
+
+## Polimorfismo em tempo de compilação - Overloading (Java)
+### Por que em tempo de compilação?
+- Esse tipo de polimorfismo é resolvido em tempo de compilação. O compilador decide qual dos métodos chamar com base nos tipos e no número de argumentos passados.
+
+```java
+
+// Superclasse - Classe Mãe
+public class Superclasse {
+    public String imprimir (String i) {
+        return "Imprime : " + i;
+    }
+}
+
+// Subclasse - Classe Filha
+public class Subclasse extends Superclasse {
+    @Override
+    public String imprimir (Sring j) {
+        return "Imprime de novo : " + j;
+    }
+}
+```
 
 ## Authors
 
