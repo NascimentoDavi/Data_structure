@@ -7,6 +7,13 @@ public class Filme {
     private String classificacao;
     private String genero;
 
+    public Filme () {
+        this.nome = "";
+        this.duracao = 0;
+        this.classificacao = "";
+        this.genero = "";
+    }
+
     public Filme (String nome, int duracao, String classificacao, String genero) {
         this.nome = nome;
         this.duracao = duracao;

@@ -14,9 +14,10 @@ public class Data {
 
     public Data (String data) {
         String[] partes = data.split("/");
-        this.setDay(Integer.parseInt(partes[0]));
         this.setMonth(Integer.parseInt(partes[1]));
         this.setYear(Integer.parseInt(partes[2]));
+        this.setDay(Integer.parseInt(partes[0]));
+        
     }
 
     // Getter for day
@@ -81,7 +82,8 @@ public class Data {
     }
 
     // Method to print the date in a readable format
-    public String formatDate() {
+    @Override
+    public String toString() {
         return String.format("%02d/%02d/%04d", day, month, year);
     }
 }

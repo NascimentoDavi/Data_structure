@@ -21,8 +21,8 @@ public class Hour {
 
     public Hour (String horarioInicio) {
         String[] partes = horarioInicio.split(":");
-        this.setMinutes(Integer.parseInt(partes[0]));
-        this.setHours(Integer.parseInt(partes[1]));
+        this.setHours(Integer.parseInt(partes[0]));
+        this.setMinutes(Integer.parseInt(partes[1]));
     }
 
     // Getter for hours
@@ -68,7 +68,8 @@ public class Hour {
     }
 
     // Method to format the time as HH:MM:SS
-    public String formatTime() {
+    @Override
+    public String toString() {
         return String.format("%02d:%02d:%02d", hours, minutes, seconds);
     }
 }

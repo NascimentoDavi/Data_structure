@@ -28,6 +28,7 @@ public class Assentos {
         }
     }
 
+    // Mostra os lugares e se eles estão ocupados ou não.
     public String mostrarLugares () {
         String result = "";
         for(int i = 0; i < this.disponivel.length; i++) {
@@ -42,6 +43,5 @@ public class Assentos {
         }
         return result;
     }
-
 
 }
