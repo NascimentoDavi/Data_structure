@@ -65,9 +65,11 @@ public class App {
         System.out.print("Genero do Filme: ");
         filme.setGenero(scan.nextLine());
 
-        Sessao sessao = new Sessao(filme, data, horario);
+        Secao secao = new Secao(filme, data, horario);
 
-        cinema.cadastrar(sessao);
+        cinema.cadastrar(secao);
+
+        System.out.println("Seção Cadastrada com sucesso!");
     }
 
     public static void vender () {
@@ -80,9 +82,20 @@ public class App {
 
         */
 
+        int opt, fileira, assento;
+
+        System.out.println("Escolha a seção : \n");
+        System.out.println(cinema.getSecoesResumo());
+        System.out.print("Seção que deseja ver assentos : ");
+        opt = Integer.parseInt(scan.nextLine());
+
+        cinema.getAssentos(opt);
+
+        cinema.vender();
+
     }
 
     public static void mostrarSessoes () {
-        System.out.println("\n" + cinema.getSessoes());
+        System.out.println("\n" + cinema.getSecoesAll());
     }
 }

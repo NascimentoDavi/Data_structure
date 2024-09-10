@@ -5,6 +5,12 @@ public class Hour {
     private int minutes;
     private int seconds;
 
+    public Hour () {
+        this.hours = 0;
+        this.minutes = 0;
+        this.seconds = 0;
+    }
+
     // Constructor for hours and minutes (24-hour format)
     public Hour(int hours, int minutes) {
         this.setHours(hours);

@@ -3,7 +3,7 @@ package C1;
 import Entity.Data;
 import Entity.Hour;
 
-public class Sessao {
+public class Secao {
 
     // Atributos de Instância - cada objeto possui o seu
     private Filme filme;
@@ -18,10 +18,19 @@ public class Sessao {
     // Atributo de classe - compartilhado entre todos os objetos da classe
     private static double preco = 50.00;
 
-    public Sessao (Filme filme, Data dataSessao, Hour horarioSessao) {
+    public Secao (Filme filme, Data dataSessao, Hour horarioSessao) {
         this.filme = filme;
         this.dataSessao = dataSessao;
         this.horarioSessao = horarioSessao;
+        this.assentos = new Assentos();
+        this.quantVendida = 0;
+        this.quantPresentes = 0;
+    }
+
+    public Secao () {
+        this.filme = new Filme();
+        this.dataSessao = new Data();;
+        this.horarioSessao = new Hour();
         this.assentos = new Assentos();
         this.quantVendida = 0;
         this.quantPresentes = 0;
@@ -52,7 +61,7 @@ public class Sessao {
         this.dataSessao = dataSessao;
     }
 
-    public Hour getHorarioSessao() {
+    public Hour getHorarioSecao() {
         return horarioSessao;
     }
 
@@ -81,7 +90,7 @@ public class Sessao {
     }
 
     public static void setPreco(double preco) {
-        Sessao.preco = preco;
+        Secao.preco = preco;
     }
 
     // Método de Venda de assentos
@@ -95,8 +104,17 @@ public class Sessao {
         }
     }
 
+    public String getResumo () {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Nome Filme : ");
+        sb.append(getFilme().getNome());
+        sb.append(" | Horario Seção : ");
+        sb.append(getHorarioSecao());
+        return sb.toString();
+    }
+
     @Override
     public String toString () {
-        return this.getFilme() + " | Data Sessão : " + getDataSessao() + " | Horário Sessão : " + getHorarioSessao() + " | Quantidade Vendida : " + getQuantVendida() + " | Quantidade Presentes : " + getQuantPresentes();
+        return this.getFilme() + " | Data Sessão : " + getDataSessao() + " | Horário Sessão : " + getHorarioSecao() + " | Quantidade Vendida : " + getQuantVendida() + " | Quantidade Presentes : " + getQuantPresentes();
     }
 }

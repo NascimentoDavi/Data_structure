@@ -5,6 +5,12 @@ public class Data {
     private int month;
     private int year;
 
+    public Data () {
+        this.day = 0;
+        this.month = 0;
+        this.year = 0;
+    }
+
     // Constructor to initialize the date
     public Data(int day, int month, int year) {
         this.setYear(year);   // Set year first because leap year affects day validation in February
