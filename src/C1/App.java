@@ -12,34 +12,40 @@ public class App {
     public static void main(String[] args) {
        
 
-        System.out.println("Cadastro de Cinema: ");
+        System.out.println("\nCadastro de Cinema: ");
         int opt = 0; 
         
         while (opt != 4) {
-            System.out.println("\n\nDigite o numero de uma das opções a seguir: ");
-            System.out.print("1 - Cadastrar;\n2 - Vender\n3 - Mostrar Sessoes Cadastrados\n4 - Sair\nOpção : ");
-            opt = Integer.parseInt(scan.nextLine());
 
-            switch (opt) {
-                case 1:
-                    cadastrar();
-                    break;
+            try {
+                System.out.println("\nDigite o numero de uma das opções a seguir: ");
+                System.out.print("1 - Cadastrar;\n2 - Vender\n3 - Mostrar Sessoes Cadastrados\n4 - Sair\nOpção : ");
+                opt = Integer.parseInt(scan.nextLine());
             
-                case 2: 
-                    vender();
-                    break;
+                switch (opt) {
+                    case 1:
+                        cadastrar();
+                        break;
+                
+                    case 2: 
+                        vender();
+                        break;
 
-                case 3:
-                    mostrarSessoes();
-                    break;
+                    case 3:
+                        System.out.println(mostrarSessoes());
+                        break;
 
-                case 4:
-                    System.out.println("Saindo...");
-                    break;
+                    case 4:
+                        System.out.println("Saindo...");
+                        break;
 
-                default:
-                    System.out.println("Digite uma das opções apresentadas, por gentileza.");
-                    break;
+                    default:
+                        System.out.println("Digite uma das opções apresentadas, por gentileza.");
+                        break;
+                }
+            } catch (Exception e) {
+                System.out.println("Algum erro ocorreu. Tente novamente");
+                continue;
             }
         }
     }
@@ -82,20 +88,27 @@ public class App {
 
         */
 
-        int opt, fileira, assento;
+        if(cinema.getSecoesResumo().isEmpty()){
+            System.out.println("Nenhuma seção cadastrada até o momento");
+        } else {
+            int opt;
+            System.out.println("Escolha a seção : \n");
+            System.out.println(cinema.getSecoesResumo());
+            System.out.print("Seção que deseja ver assentos : ");
+            opt = Integer.parseInt(scan.nextLine());
 
-        System.out.println("Escolha a seção : \n");
-        System.out.println(cinema.getSecoesResumo());
-        System.out.print("Seção que deseja ver assentos : ");
-        opt = Integer.parseInt(scan.nextLine());
+            cinema.getAssentos(opt);
 
-        cinema.getAssentos(opt);
-
-        cinema.vender();
-
+            cinema.vender(opt);
+        }
     }
 
-    public static void mostrarSessoes () {
-        System.out.println("\n" + cinema.getSecoesAll());
+    public static String mostrarSessoes () {
+        String str = cinema.getSecoesAll();
+        if(str.isEmpty()) {
+            return "Não há nenhuma seção cadastrada ainda.";
+        } else {
+            return "\n" + str;
+        }
     }
 }

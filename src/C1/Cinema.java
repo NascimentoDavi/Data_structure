@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class Cinema {
 
     static Scanner scan = new Scanner(System.in);
-    static Secao sec = new Secao();
 
     private ArrayList<Secao> secoes = new ArrayList<Secao>();
 
@@ -31,24 +30,24 @@ public class Cinema {
     }
 
     public void getAssentos (int index) {
-        if ((index - 1) >= 0 && (index -1) <= this.secoes.size()) {
-            System.out.println(secoes.get(index -1).getAssentos().mostrarLugares());
+        if ((index) >= 0 && (index) <= this.secoes.size()) {
+            System.out.println(secoes.get(index).getAssentos().mostrarLugares());
         }
     }
 
-    public void vender () {
+    public void vender (int index) {
         int fileira, assento;
         System.out.println("Fileira : ");
         fileira = Integer.parseInt(scan.nextLine());
         System.out.println("Assento : ");
         assento = Integer.parseInt(scan.nextLine());
 
-        if(sec.venda(fileira, assento) == true) {
-            System.out.println("Assento Selecionado : ");
-            System.out.println("\n" + sec.getAssentos().mostrarLugares());
+        if(secoes.get(index).venda(fileira, assento) == true) {
+            System.out.println("Assento Selecionado : " + Integer.toString(fileira) + Integer.toString(assento));
+            System.out.println("\n" + secoes.get(index).getAssentos().mostrarLugares());
         } else {
             System.out.println("Assentos já estão ocupados");
-            System.out.println("\n" + sec.getAssentos().mostrarLugares());
+            System.out.println("\n" + secoes.get(index).getAssentos().mostrarLugares());
         }
     }
 }
