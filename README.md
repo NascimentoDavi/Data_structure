@@ -6,9 +6,17 @@
 This is actually only a repository where I'm storing all the knowledge I've been adquiring regarding Data Structure, one of the most import subjects when looking into the development world.
 
 ## Collections
-### Linked Lists
 
-### Set
+### Interface List
+- Possui métodos de manipulação e duas classes que IMPLEMENTAM esta interface: ArrayList e LinkedList;
+
+### Array List
+- Implementação da Interface List que possui melhor performance no acesso e pior desempenho na inserção e remoção;
+
+### Linked Lists
+- A principal diferença entre o LinkedList e o ArrayList é na performance entre os métodos add, remove, get e set. Ou seja, LinkedList possui melhor performance nos métodos add e remove, do que no ArrayList, pois ela implementa uma lista encadeada, que é dinâmica.
+
+### Conjuncts
     - It's not possible to have duplicated objects.
     - Sets can be empty
     - Cannot be infinite
@@ -17,8 +25,17 @@ This is actually only a repository where I'm storing all the knowledge I've been
     - Insure Uniqueness
 
 #### HashSet
-    - Faster with modification operations
+    - A class implementing the Set interface;
+    - Permits the null element;
+    - Faster with modification operations: Constant time for the basic oprations : Search, insert and delete;
     - Do not stablish any order among the objects inserted
+
+#### TreeSet
+    - Is an implementation of the SortedSet interface which uses the three for storage purposes.
+    - While HashSet is much faster with search, insert and delet, TreeSet takes O(log n);
+    - However, TreeSet keep sorted data, also suporting operations like higher(), floor() and ceiling();
+    - These opeartions are also O(log n) in TreeSet and not supported in HashSet;
+    - TreeSet is implemented using a self-balancing binary search tree (Red-Black Tree);
 
 ```java
 // Printing HashSet elements using forEach
